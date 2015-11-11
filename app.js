@@ -12,11 +12,13 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
 
+	var fileName = req.query.file;
+
 	converter.on("end_parsed", function(jsonArray) {
 		res.render('home', jsonArray);
 	});
 
-	fs.createReadStream("./test.csv").pipe(converter);
+	fs.createReadStream(fileName).pipe(converter);
 });
 
 app.listen(3000);
