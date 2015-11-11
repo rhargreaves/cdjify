@@ -15,6 +15,8 @@ app.get('/', function (req, res) {
 	var fileName = req.query.file;
 
 	converter.on("end_parsed", function(jsonArray) {
+
+		console.log(jsonArray);
 		res.render('home', jsonArray);
 	});
 
