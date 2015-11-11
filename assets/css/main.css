@@ -1,2 +1,16 @@
 body {
+	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"
+}
+
+table {
+	border-collapse: collapse;
+}
+
+thead > tr {
+	background-color: #000;
+	color: #FFF;
+}
+
+tbody > tr:nth-child(even) {
+	background-color: #EEEEEE;
 }

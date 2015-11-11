@@ -1,6 +1,23 @@
+
+<table>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Title</th>
+			<th>BPM</th>
+			<th>Key</th>
+			<th>Comment</th>
+		</tr>
+	</thead>
+	<tbody>
 {{#each this}}
-	<div class="track">
-		{{title}}
-		{{artist}}
-	</div>
+		<tr>
+			<td>{{index}}</td>
+			<td>{{artist}} - {{title}}</td>
+			<td>{{bpm}}</td>
+			<td>{{key}}</td>
+			<td>{{comment}}</td>
+		</tr>
 {{/each}}
+	</tbody>
+</table>
