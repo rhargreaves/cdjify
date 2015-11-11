@@ -4,6 +4,7 @@
   "description": "HTML generator for CD track lists output as CSV from foobar2000",
   "main": "index.js",
   "scripts": {
+	"start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
