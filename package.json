@@ -1,0 +1,23 @@
+{
+  "name": "cdjify",
+  "version": "1.0.0",
+  "description": "HTML generator for CD track lists output as CSV from foobar2000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhargreaves/cdjify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhargreaves/cdjify/issues"
+  },
+  "homepage": "https://github.com/rhargreaves/cdjify#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1"
+  }
+}
