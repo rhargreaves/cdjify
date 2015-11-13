@@ -1,9 +1,18 @@
 body {
-	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"
+	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 0.6em;
 }
 
 table {
 	border-collapse: collapse;
+}
+
+th, td {
+	padding: 1px;
+}
+
+th {
+	text-align: left;
 }
 
 thead > tr {

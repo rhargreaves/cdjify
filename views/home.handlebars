@@ -2,6 +2,9 @@
 <table>
 	<thead>
 		<tr>
+			<th colspan="5">{{title}}</th>
+		</tr>
+		<tr>
 			<th>#</th>
 			<th>Title</th>
 			<th>BPM</th>
@@ -10,7 +13,7 @@
 		</tr>
 	</thead>
 	<tbody>
-{{#each this}}
+{{#each tracks}}
 		<tr>
 			<td>{{index}}</td>
 			<td>{{artist}} - {{title}}</td>
