@@ -5,14 +5,43 @@ body {
 
 table {
 	border-collapse: collapse;
+	table-layout: fixed;
 }
 
 th, td {
-	padding: 1px;
+	white-space: nowrap;
+	padding: 2px 0 2px 2px;
+	line-height: 13px;
 }
 
 th {
 	text-align: left;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+th.cd-title {
+	font-size: 1.1em;
+}
+
+td.index {
+	width: 1em;
+}
+
+td.title {
+	width: 6cm;
+}
+
+td.bpm {
+	width: 1.1em;
+}
+
+td.key {
+	width: 1.2em;
+}
+
+td.comment {
+	width: 100%;
 }
 
 thead > tr {
@@ -22,4 +51,32 @@ thead > tr {
 
 tbody > tr:nth-child(even) {
 	background-color: #EEEEEE;
+}
+
+span.artist, span.title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: inline-block;
+	vertical-align: bottom;
+	word-break: break-all;
+}
+
+span.artist {
+	max-width: 2.5cm;
+}
+
+span.title {
+	width: 6cm;
+}
+
+div.cuthere {
+	border-style: dashed;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	width: 11.8cm;
+	height: 11.8cm;
+	display: block;
+	overflow: hidden;
+	position: relative;
 }

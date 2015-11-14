@@ -1,26 +1,32 @@
 
+{{#each lists}}
+
+<div class='cuthere'>
 <table>
 	<thead>
 		<tr>
-			<th colspan="5">{{title}}</th>
+			<th class="cd-title" colspan="5">{{../title}}</th>
 		</tr>
 		<tr>
-			<th>#</th>
-			<th>Title</th>
-			<th>BPM</th>
-			<th>Key</th>
-			<th>Comment</th>
+			<th class="index">#</th>
+			<th class="title">Title</th>
+			<th class="bpm">BPM</th>
+			<th class="key">Key</th>
+			<th class="comment">Comment</th>
 		</tr>
 	</thead>
 	<tbody>
-{{#each tracks}}
+{{#each .}}
 		<tr>
-			<td>{{index}}</td>
-			<td>{{artist}} - {{title}}</td>
-			<td>{{bpm}}</td>
-			<td>{{key}}</td>
-			<td>{{comment}}</td>
+			<td class="index">{{index}}</td>
+			<td class="title"><span class="title"><span class="artist">{{artist}} -&nbsp;</span>{{title}}</span></td>
+			<td class="bpm">{{bpm}}</td>
+			<td class="key">{{key}}</td>
+			<td class="comment">{{comment}}</td>
 		</tr>
 {{/each}}
 	</tbody>
 </table>
+</div>
+
+{{/each}}

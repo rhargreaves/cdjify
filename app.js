@@ -1,6 +1,7 @@
 'use strict';
 var express = require('express');
 var exphbs  = require('express-handlebars');
+var _ = require('underscore');
 
 var Converter = require("csvtojson").Converter;
 var fs = require("fs");
@@ -17,8 +18,14 @@ app.get('/', function (req, res) {
 	var title = req.query.title;
 	var data = {};
 
-	converter.on("end_parsed", function(jsonArray) {
-		data = { tracks: jsonArray, title: title };
+	converter.on("end_parsed", function(tracks) {
+
+		var tracksPerSleve = 25;
+		var lists = _.groupBy(tracks, function(element, index) {
+			return Math.floor(index/tracksPerSleve);
+		});
+		lists = _.toArray(lists);
+		data = { lists: lists, title: title };
 		console.log(data);
 	});
 
