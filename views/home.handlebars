@@ -5,13 +5,14 @@
 <table>
 	<thead>
 		<tr>
-			<th class="cd-title" colspan="5">{{../title}}</th>
+			<th class="cd-title" colspan="6">{{../title}}</th>
 		</tr>
 		<tr>
 			<th class="index">#</th>
 			<th class="title">Title</th>
 			<th class="bpm">BPM</th>
 			<th class="key">Key</th>
+			<th class="flags">C/L</th>
 			<th class="comment">Comment</th>
 		</tr>
 	</thead>
@@ -19,9 +20,10 @@
 {{#each .}}
 		<tr>
 			<td class="index">{{index}}</td>
-			<td class="title"><span class="title"><span class="artist">{{artist}} -&nbsp;</span>{{title}}</span></td>
+			<td class="title"><span class="artist-title"><span class="artist">{{artist}} -&nbsp;</span>{{title}}</span></td>
 			<td class="bpm">{{bpm}}</td>
 			<td class="key">{{key}}</td>
+			<td class="flags">{{flags}}</td>
 			<td class="comment">{{comment}}</td>
 		</tr>
 {{/each}}

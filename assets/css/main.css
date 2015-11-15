@@ -6,6 +6,7 @@ body {
 table {
 	border-collapse: collapse;
 	table-layout: fixed;
+	border-bottom: 1px dashed #DDDDDD;
 }
 
 th, td {
@@ -22,6 +23,7 @@ th {
 
 th.cd-title {
 	font-size: 1.1em;
+	font-weight: bold;
 }
 
 td.index {
@@ -40,6 +42,10 @@ td.key {
 	width: 1.2em;
 }
 
+td.flags {
+	width: 1em;
+}
+
 td.comment {
 	width: 100%;
 }
@@ -53,7 +59,7 @@ tbody > tr:nth-child(even) {
 	background-color: #EEEEEE;
 }
 
-span.artist, span.title {
+span.artist, span.artist-title {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -64,10 +70,12 @@ span.artist, span.title {
 
 span.artist {
 	max-width: 2.5cm;
+	font-weight: normal;
 }
 
-span.title {
+span.artist-title {
 	width: 6cm;
+	/*font-weight: bold;*/
 }
 
 div.cuthere {
@@ -79,4 +87,5 @@ div.cuthere {
 	display: block;
 	overflow: hidden;
 	position: relative;
+	margin-bottom: 1cm;
 }
