@@ -1,6 +1,6 @@
 body {
 	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 0.6em;
+	font-size: 0.5em;
 }
 
 table {
@@ -9,21 +9,29 @@ table {
 	border-bottom: 1px dashed #DDDDDD;
 }
 
-th, td {
+td {
 	white-space: nowrap;
-	padding: 2px 0 2px 2px;
-	line-height: 13px;
+	padding: 1px 0 1px 2px;
+	line-height: 14px;
+	font-weight: bold;
+	font-size: 1.1em;
 }
 
 th {
+	padding: 2px 0 2px 2px;
 	text-align: left;
 	font-weight: normal;
-	font-size: 0.9em;
+	font-size: 1.1em;
 }
 
 th.cd-title {
-	font-size: 1.1em;
+	font-size: 1.5em;
 	font-weight: bold;
+}
+
+th.cd-version {
+	text-align: right;
+	padding-right: 2px;
 }
 
 td.index {
@@ -31,7 +39,7 @@ td.index {
 }
 
 td.title {
-	width: 6cm;
+	width: 6.5cm;
 }
 
 td.bpm {
@@ -70,11 +78,11 @@ span.artist, span.artist-title {
 
 span.artist {
 	max-width: 2.5cm;
-	font-weight: normal;
+	/*font-weight: normal;*/
 }
 
 span.artist-title {
-	width: 6cm;
+	width: 6.5cm;
 	/*font-weight: bold;*/
 }
 
@@ -82,8 +90,8 @@ div.cuthere {
 	border-style: dashed;
 	border-width: 1px;
 	border-color: #DDDDDD;
-	width: 11.8cm;
-	height: 11.8cm;
+	width: 11.6cm;
+	height: 11.6cm;
 	display: block;
 	overflow: hidden;
 	position: relative;

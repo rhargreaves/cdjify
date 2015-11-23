@@ -15,17 +15,18 @@ app.get('/', function (req, res) {
 
 	var converter = new Converter({});
 	var fileName = req.query.file;
+	var cdVersion = req.query.ver;
 	var title = req.query.title;
 	var data = {};
 
 	converter.on("end_parsed", function(tracks) {
 
-		var tracksPerSleve = 25;
+		var tracksPerSleve = tracks.length > 50 ? tracks.length/2 : 25;
 		var lists = _.groupBy(tracks, function(element, index) {
 			return Math.floor(index/tracksPerSleve);
 		});
 		lists = _.toArray(lists);
-		data = { lists: lists, title: title };
+		data = { lists: lists, title: title, version: cdVersion	};
 		console.log(data);
 	});
 
